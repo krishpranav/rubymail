@@ -79,3 +79,9 @@ module Rubymail
       end
     end
   end
+  
+  module Rubymail
+    class ClientError < StandardError
+      attr_accessor :http_code, :http_body
+    end
+  end
