@@ -1,0 +1,2 @@
+# rubymail
+Ruby mailing framework 
