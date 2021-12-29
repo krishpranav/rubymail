@@ -16,6 +16,24 @@ module Rubymail
         end
 
         def post(params = {})
+            request = Net::HTTP::Post.new(path)
+            request.set_form_data(params)
+
+            make_request(request)
+        end
+
+        def put(params = {})
+            request = Net::HTTP::Put.new(path)
+            request.set_form_data(params)
+
+            make_request(request)
+        end
+
+        def delete(params = {})
+            request = Net::HTTP::Delete.new(path)
+            request.set_form_data(params)
+            
+            make_request(request)
         end
     end
 end
